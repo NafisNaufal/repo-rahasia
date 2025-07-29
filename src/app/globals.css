@@ -1,26 +1,93 @@
 @import "tailwindcss";
 
+
 :root {
-  --background: #ffffff;
+  --background: #ECECEC;
   --foreground: #171717;
 }
 
-@theme inline {
+@font-face {
+  font-family: Inter;
+  src: url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+}
+
+@theme  {
+  /* color theme */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary-100: #3C6448;
+  --color-primary-200: #597E1F;
+  --color-primary-gradient: linear-gradient(to right, #3C6448, #578B50);
+
+  /* font family */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-Inter: 'Inter', sans-serif;
+  --font-Poppins: 'Poppins', sans-serif;
+
+  /* Breakpoint */
+  --breakpoint-xs: 320px;
+  --breakpoint-3xl: 1920px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.html-feedback {
+  color: var(--color-background);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.html-feedback h1  {
+  font-family: var(--font-Inter);
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1rem;
 }
+
+.html-feedback h2 {
+  font-family: var(--font-Inter);
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.html-feedback p {
+  font-family: var(--font-Inter);
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: justify;
+}
+
+.html-feedback p strong {
+  font-family: var(--font-Inter);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-inline-end: 0.5rem;
+}
+
+.html-feedback ul {
+  font-family: var(--font-Inter);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: justify;
+  list-style-type: disc;
+}
+
+.html-feedback ul li {
+  margin-bottom: 0.5rem;
+}
+
+.html-feedback ol {
+  font-family: var(--font-Inter);
+  font-size: 1rem;
+  font-weight: 800;
+  text-align: justify;
+  list-style-type: decimal;
+}
+
+.html-feedback ol li {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
